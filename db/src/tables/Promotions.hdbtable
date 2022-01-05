@@ -1,0 +1,19 @@
+COLUMN TABLE "epam-internal-ibp.db.tables::promotions" (
+	PROMOTION_ID INTEGER GENERATED ALWAYS AS IDENTITY (START WITH 1 INCREMENT BY 1) NOT NULL  COMMENT 'Promotion ID',
+	PROMOTION_TYPE NVARCHAR(512) COMMENT 'Promotion Type',
+	PROMOTION_DATE DATE COMMENT 'Promotion Date',
+	DURATION NVARCHAR(512) COMMENT 'Duration',
+	PRODUCT_DESCR NVARCHAR(512) COMMENT 'Product Description',
+    CUSTOMER_DESCR NVARCHAR(512) COMMENT 'Customer Description',
+    PROMOTION_QTY INTEGER COMMENT 'Promotion Quantity',
+    PROMOTION_PRICE DOUBLE COMMENT 'Promotion Price',
+    DISCOUNT_PERCENTAGE DOUBLE COMMENT 'Discount Percentage',
+    SALES_RED_PREV_PRD DOUBLE COMMENT 'Sales Reductions of Previous Preiods',
+    SALES_RED_PREV_PERCENTAGE DOUBLE COMMENT 'Sales Reductions of Previous Preiods Percentage',
+    SALES_RED_FUTR_PRD DOUBLE COMMENT 'Sales Reductions of Future Preiods',
+    SALES_RED_FUTR_PERCENTAGE DOUBLE COMMENT 'Sales Reductions of Previous Preiods Percentage',
+    PLANNER NVARCHAR(512) COMMENT 'Planner',
+    PANNING_NOTE NVARCHAR(512) COMMENT 'Planning Note',
+	PRIMARY KEY ("PROMOTION_ID")
+)
+COMMENT 'SAP IBP Promotions data'
